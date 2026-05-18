@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: banking-system
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/banking_system
+    username: root
+    password: 2007
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8080

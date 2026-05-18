@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Banking System</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+    </ul>
+</nav>
+<div class="main-content">
+<div class="admin-dashboard">
+
+    <h1>
+
+        Banking Management Dashboard
+
+    </h1>
+
+    <div class="admin-grid">
+
+        <a href="/statistics"
+           class="admin-card">
+
+            <h2>
+
+                Statistics
+
+            </h2>
+
+            <p>
+
+                View banking analytics
+                and statistics
+
+            </p>
+
+        </a>
+
+        <a href="/allUsers"
+           class="admin-card">
+
+            <h2>
+
+                Users
+
+            </h2>
+
+            <p>
+
+                Manage all customers,
+                KYC and accounts
+
+            </p>
+
+        </a>
+
+    </div>
+</div>
+
+</div>
+<footer>
+    © 2026 Banking System | Developed by Sathish
+</footer>
+</body>
+
+</html>

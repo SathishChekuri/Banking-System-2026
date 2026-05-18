@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Account Created</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+
+        Banking System
+
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+    </ul>
+
+</nav>
+<div class="main-content">
+<div class="success-container">
+
+    <div class="success-card">
+
+        <div class="success-icon">
+
+            ✓
+
+        </div>
+
+        <h1>
+
+            Account Created Successfully
+
+        </h1>
+
+        <p>
+
+            Your account has been created successfully.
+
+        </p>
+
+        <div class="account-details">
+
+            <h2>
+
+                Account Number
+
+            </h2>
+
+            <p th:text="${accountNumber}"></p>
+
+            <h2>
+
+                Generated Password
+
+            </h2>
+
+            <p th:text="${password}"></p>
+
+        </div>
+
+        <a href="/">
+
+            <button>
+
+                Go To Home
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+</div>
+<footer>
+
+    © 2026 Banking System | Developed by Sathish
+
+</footer>
+
+</body>
+
+</html>

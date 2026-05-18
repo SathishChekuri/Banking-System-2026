@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        Banking System
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+    </ul>
+
+</nav>
+<div class="main-content">
+<div class="form-container">
+
+    <h1>Create Account</h1>
+
+    <form action="/saveUser" method="post">
+
+        <label>Full Name *</label>
+
+        <input type="text"
+               name="name"
+               placeholder="Enter Full Name"
+               required>
+        <label>Email *</label>
+
+        <input type="email"
+               name="email"
+               placeholder="Enter Email"
+               required>
+
+        <label>Phone Number *</label>
+
+        <input type="text"
+               name="phone"
+               placeholder="Enter Phone Number"
+               required>
+
+        <label>Date of Birth *</label>
+
+        <input type="date"
+               name="dob"
+               required>
+        <label>Address *</label>
+        
+        <input type="text"
+                name="address"
+                placeholder="Enter Address"
+                required>
+        <button type="submit">
+
+            Create Account
+
+        </button>
+
+    </form>
+
+</div>
+</div>
+<footer>
+
+    © 2026 Banking System | Developed by Sathish
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Withdraw Money</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Banking System</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+    </ul>
+</nav>
+<div class="main-content">
+<div class="form-container">
+
+    <h1>Withdraw Money</h1>
+
+    <form action="/withdrawMoney"
+      method="post">
+
+    <label>
+
+        Account Number *
+
+    </label>
+
+    <input type="text"
+           name="accountNumber"
+           required>
+
+    <label>
+
+        Password *
+
+    </label>
+
+    <input type="password"
+           name="password"
+           required>
+
+    <label>
+
+        Withdraw Amount *
+
+    </label>
+
+    <input type="number"
+           name="amount"
+           required>
+    <p style="color:red;
+          font-weight:bold;
+          margin-top:15px;"
+   th:text="${error}">
+
+</p>
+    <button type="submit">
+
+        Withdraw Money
+
+    </button>
+
+</form>
+</div>
+</div>
+<footer>
+    © 2026 Banking System | Developed by Sathish
+</footer>
+
+</body>
+</html>

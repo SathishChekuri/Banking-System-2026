@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Check Balance</title>
+
+    <link rel="stylesheet"
+          href="/css/style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+
+        Banking System
+
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+    </ul>
+
+</nav>
+<div class="main-content">
+<div class="form-container">
+
+    <h1>
+
+        Check Balance
+
+    </h1>
+
+    <form action="/checkBalance"
+          method="post">
+
+        <label>
+
+            Account Number *
+
+        </label>
+
+        <input type="text"
+               name="accountNumber"
+               required>
+
+        <label>
+
+            Password *
+
+        </label>
+
+        <input type="password"
+               name="password"
+               required>
+        <p style="color:red;
+          font-weight:bold;
+          margin-top:15px;"
+   th:text="${error}">
+
+</p>
+        <button type="submit">
+
+            Check Balance
+
+        </button>
+
+    </form>
+
+    <div style="margin-top:25px;">
+
+        <h3 style="color:#0077b6;">
+
+            Password Format
+
+        </h3>
+
+        <p>
+
+            Password =
+            last 5 digits of phone +
+            DOB
+
+        </p>
+
+        <p>
+
+            Example:
+
+        </p>
+
+        <p>
+
+            Phone:
+            9876543210
+
+        </p>
+
+        <p>
+
+            DOB:
+            2005-06-07
+
+        </p>
+
+        <p>
+
+            Password:
+            4321020050607
+
+        </p>
+
+    </div>
+
+</div>
+</div>
+<footer>
+    © 2026 Banking System | Developed by Sathish
+</footer>
+
+</body>
+
+</html>

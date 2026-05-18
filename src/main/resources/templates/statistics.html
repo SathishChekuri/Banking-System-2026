@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Statistics</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Banking System</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+    </ul>
+</nav>
+<div class="main-content">
+<div class="stats-container">
+
+    <div class="stat-card">
+
+        <h2>Total Users</h2>
+
+        <p th:text="${totalUsers}"></p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>Total Transactions</h2>
+
+        <p th:text="${totalTransactions}"></p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>Total Balance</h2>
+
+        <p>
+
+            ₹ <span th:text="${totalBalance}"></span>
+
+        </p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>Active Accounts</h2>
+
+        <p th:text="${activeAccounts}"></p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>Blocked Accounts</h2>
+
+        <p th:text="${blockedAccounts}"></p>
+
+    </div>
+
+</div>
+</div>
+<footer>
+    © 2026 Banking System | Developed by Sathish
+</footer>
+</body>
+
+</html>

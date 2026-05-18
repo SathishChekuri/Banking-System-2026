@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>
+
+        Transaction History
+
+    </title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+<nav class="sticky-nav">
+
+    <div class="logo">
+
+        Banking System
+
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+    </ul>
+
+</nav>
+<div class="main-content">
+<div class="history-container">
+
+    <h1>
+
+        Transaction History
+
+    </h1>
+
+    <div class="history-header">
+
+        <span>Type</span>
+
+        <span>Date & Time</span>
+
+        <span>From</span>
+
+        <span>To</span>
+
+        <span>Method</span>
+
+        <span>Amount</span>
+
+        <span>Balance</span>
+
+    </div>
+
+    <div class="history-row"
+
+         th:each="t : ${transactions}">
+
+        <span class="type-badge"
+
+              th:text="${t.transactionType}">
+
+        </span>
+
+        <span th:text="${t.transactionDate}"></span>
+
+        <span th:text="${t.accountNumber}"></span>
+
+        <span th:text="${t.toAccount}"></span>
+
+        <span th:text="${t.method}"></span>
+
+        <span class="amount">
+
+            ₹ <span th:text="${t.amount}"></span>
+
+        </span>
+
+        <span>
+
+            ₹ <span th:text="${t.balance}"></span>
+
+        </span>
+
+    </div>
+</div>
+</div>
+<footer>
+    © 2026 Banking System | Developed by Sathish
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Update KYC</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+<nav>
+
+    <div class="logo">
+        Banking System
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+    </ul>
+
+</nav>
+<div class="main-content">
+<div class="form-container">
+
+    <h1>
+
+        Update KYC
+
+    </h1>
+
+    <form action="/updateKyc"
+          method="post">
+
+       <input type="hidden"
+       name="accountNumber"
+       th:value="${user.accountNumber}">
+
+        <label>
+
+            Full Name
+
+        </label>
+
+        <input type="text"
+               name="name"
+               th:value="${user.name}">
+
+        <label>
+
+            Email
+
+        </label>
+
+        <input type="email"
+               name="email"
+               th:value="${user.email}">
+
+        <label>
+
+            Phone
+
+        </label>
+
+        <input type="text"
+               name="phone"
+               th:value="${user.phone}">
+
+        <label>
+
+            DOB
+
+        </label>
+
+        <input type="date"
+               name="dob"
+               th:value="${user.dob}">
+
+        <label>
+
+            Address
+
+        </label>
+
+        <textarea name="address"
+                  rows="4"
+                  th:text="${user.address}">
+
+        </textarea>
+
+        <button type="submit">
+
+            Update KYC
+
+        </button>
+
+    </form>
+
+</div>
+</div>
+<footer>
+    © 2026 Banking System | Developed by Sathish
+</footer>
+
+</body>
+
+</html>

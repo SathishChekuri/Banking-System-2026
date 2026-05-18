@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>All Users</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+<nav>
+    <div class="logo">Banking System</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+    </ul>
+</nav>
+<div class="main-content">
+<div class="history-container">
+
+    <h1>
+
+        All Users
+
+    </h1>
+
+    <div class="history-header">
+
+        <span>Account</span>
+
+        <span>Name</span>
+
+        <span>Email</span>
+
+        <span>Phone</span>
+
+        <span>Balance</span>
+
+        <span>Status</span>
+
+        <span>KYC</span>
+
+        <span>Actions</span>
+
+    </div>
+
+    <div class="history-row"
+
+         th:each="u : ${users}">
+
+        <span th:text="${u.accountNumber}"></span>
+
+        <span th:text="${u.name}"></span>
+
+        <span th:text="${u.email}"></span>
+
+        <span th:text="${u.phone}"></span>
+
+        <span th:text="${u.balance}"></span>
+
+        <span th:text="${u.status}"></span>
+
+        <span th:text="${u.kycStatus}"></span>
+
+        <div style="display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                    width:100%;
+                    gap:10px;">
+
+            <a th:href="@{/adminTransactions(accountNumber=${u.accountNumber})}">
+
+                <button style="padding:6px 10px;
+                               font-size:12px;">
+
+                    Transactions
+
+                </button>
+
+            </a>
+
+            <a th:href="@{/updateKycStatus(accountNumber=${u.accountNumber})}">
+
+                <button style="padding:6px 10px;
+                               font-size:12px;">
+
+                    KYC
+
+                </button>
+
+            </a>
+
+            <a th:href="@{/toggleStatus(accountNumber=${u.accountNumber})}">
+
+                <button style="padding:6px 10px;
+                               font-size:12px;">
+
+                    AC Status
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+<footer>
+    © 2026 Banking System | Developed by Sathish
+</footer>
+</body>
+
+</html>

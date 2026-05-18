@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Money Transfer</title>
+
+    <link rel="stylesheet"
+          href="/css/style.css">
+
+</head>
+
+<body>
+<nav>
+
+    <div class="logo">
+        Banking System
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+    </ul>
+
+</nav>
+<div class="main-content">
+<div class="form-container">
+
+    <h1>
+
+        Money Transfer
+
+    </h1>
+
+    <form action="/transferMoney"
+          method="post">
+
+        <label>
+
+            From Account Number *
+
+        </label>
+
+        <input type="text"
+               name="fromAccount"
+               required>
+
+        <label>
+
+            To Account Number *
+
+        </label>
+
+        <input type="text"
+               name="toAccount"
+               required>
+        <label>
+            Amount *
+        </label>
+        <input type="number"
+               name="amount"
+               required>
+        <label>
+            Password *
+        </label>
+        <input type="password"
+               name="password"
+               required>
+        <p style="margin-top:10px;">
+            Example Password:
+            last 5 digits of phone +
+            DOB
+        </p>
+        <p>
+            Example:
+            4321020050607
+        </p>
+        <p style="color:red;
+          font-weight:bold;
+          margin-top:15px;"
+          th:text="${error}">
+
+        </p>
+        <button type="submit">
+
+            Transfer Money
+
+        </button>
+
+    </form>
+</div>
+</div>
+<footer>
+    © 2026 Banking System | Developed by Sathish
+</footer>
+
+</body>
+
+</html>
