@@ -1,16 +1,15 @@
 spring:
-  application:
-    name: banking-system
-
   datasource:
-    url: jdbc:mysql://localhost:3306/banking_system
-    username: root
-    password: 2007
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
   jpa:
     hibernate:
       ddl-auto: update
+
     show-sql: true
 
-server:
-  port: 8080
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
